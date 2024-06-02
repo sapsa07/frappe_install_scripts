@@ -9,6 +9,9 @@ docker rm -vf $(docker ps -aq)
 # Delete all images
 docker rmi -f $(docker images -aq)
 
+# 
+sudo docker system prune --all --force --volumes
+
 echo "All Docker containers, volumes, and images have been deleted."
 
 # docker restart $(docker ps -q)
